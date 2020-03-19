@@ -1,6 +1,6 @@
 class Node:
     def __init__(self, data, next=None):
-        self.node = data
+        self.data = data
         self.next = next
 
 
@@ -16,3 +16,9 @@ class NodeManager:
             while node.next:
                 node = node.next
             node.next = Node(data)
+
+    def desc(self, data):
+        node = self.head
+        while node:
+            print(node.data)
+            node = node.next
